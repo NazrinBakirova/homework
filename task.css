@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table {
+    position: relative;
+    width:840px ;
+    height: 340px ;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 200px;
+    background-color: #E0E5F7;
+    border-radius: 15px;
+}
+.main-table {
+    position: absolute;
+    width: 800px;
+    height: 300px;
+    border:1px solid #E0E5F7;
+    text-align: center;
+   transform: translate(-50%,-50%);
+   left: 50%;
+   top:50%;
+   background:linear-gradient(to right, #6f78ca, #3340AE);
+   
+    border-radius: 15px;
+}
+.main-table-title {
+    padding-top: 60px;
+    font-size: 30px;
+    font-family: "Host Grotesk", serif;
+    color: white;
+}
+.main-table-items {
+   padding: 10px;
+   font-size: 13px;
+    font-family: "Host Grotesk", serif;
+    color: white;
+}
+.main-table-items input {
+    margin-top: 10px ;
+   padding: 10px 80px;
+   background-color: #8D9ADC;
+   color: white;
+   border:1px solid #E0E5F7;
+   border-radius: 15px ;
+}
+.photos {
+    width: 800px;
+    height: 80px;
+    padding: 40px;
+    position: absolute;
+    margin: 0 auto;
+    
+}
+.photo1 {
+    display: inline-block;
+    margin:  20px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-color: #E0E5F7;
+}
+.photo2 {
+    display: inline-block;
+    margin:  20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.photo3 {
+    display: inline-block;
+    margin:  20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.photo4 {
+    display: inline-block;
+    margin:  20px;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.photo5 {
+    display: inline-block;
+    margin:  20px;
+    border: 5px solid white;
+    border-radius: 50%;
+    
+}
