@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+    
+@media screen and (max-width:768px){
+    main{
+        width: 430px;
+        background-color: #0C0C0D;
+        height: 932px;
+        padding-top: 35px;
+    } 
+
+    .container{
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    .header{
+        width: 400px;
+        height: 189px;
+        background-color:#040C17;
+        border-radius: 34px;
+        border: 1px solid white;
+        color: white;
+    }
+
+    .header_title {
+        font-size: 23px;
+    }
+
+    .header_date {
+        
+        font-size: 20px;
+    }
+    .header_items{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 40px;
+        }
+      .header_content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      } 
+
+      .input_table {
+        padding-top: 25px;
+        display: flex;
+        gap: 20px;
+        width: 400px;
+        height: 40px;
+        align-items: center;
+      }
+
+      .header_list_num {
+        padding: 30px 40px;
+        background-color: aliceblue;
+        border-radius: 50%;
+        color: #040C17;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .input {
+        width: 340px;
+        height: 40px;
+        background-color: #111112;
+        border: 1px solid #252529;
+        border-radius: 6px;
+        color: white;
+       
+      }
+      .add_btn {
+        padding: 2px 10px;
+        font-size: 30px;
+        border-radius: 50%;
+      }
+
+      .todo_table_title {
+        padding: 15px 0;
+        color: gray;
+        font-size: 30px;
+      }
+
+      
+     
+      .list_item {
+        width: 400px;
+        height: 50px;
+        background-color: #252529;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 15px;
+        font-size: 35px;
+        color: aliceblue;
+        position: relative;
+    
+      }
+      .points{
+        background:none;
+        border: none;
+        cursor: pointer;
+      }
+      .points img{
+        height: 30px;
+      }
+     .deleteBtn {
+        background-color: red;
+        color: aliceblue;
+        padding: 10px 20px;
+        position: absolute;
+       right: 5%;
+       display: none;
+       top: 1%;
+    
+     }
+     .todo_list{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+     }
+     .active{
+       display: block;
+     }
+     
+}
