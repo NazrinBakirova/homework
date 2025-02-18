@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="task7.css">
+</head>
+<body>
+    <div class="container">
+        <form id="employeeForm">
+            <h2>İşçi Məlumatları</h2>
+            <label>Ad və Soyad:</label>
+            <input type="text" id="fullName" >
+            
+            <label>Yaş:</label>
+            <input type="number" id="age">
+            
+            <label>Vəzifə:</label>
+            <input type="text" id="position" >
+            
+            <label>Təcrübə (illər):</label>
+            <input type="number" id="experience">
+            
+            <label>Bacarıqlar:</label>
+            <select id="skills">
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="React">React</option>
+                <option value="Node.js">Node.js</option>
+            </select>
+            
+            <label>İşə başlama tarixi:</label>
+            <input type="date" id="startDate" >
+            
+            <button type="submit">Əlavə et</button>
+        </form>
+
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Ad və Soyad</th>
+                    <th onclick="sortTable(1)">Yaş</th>
+                    <th onclick="sortTable(2)">Vəzifə</th>
+                    <th onclick="sortTable(3)">Təcrübə</th>
+                    <th onclick="sortTable(4)">Bacarıqlar</th>
+                    <th onclick="sortTable(5)">Başlama Tarixi</th>
+                    <th>Redaktə</th>
+                    <th>Sil</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+   
+    <script src="task7.js"></script>
+</body>
+</html>
