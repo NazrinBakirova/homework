@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3fafe;
+    font-family: "Poppins", serif;
+}
+.main{
+    width: 840px;
+    height: 600px;
+    margin: 10px auto;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    background-color: white;
+    padding-left: 50px;
+    border-radius:20px 20px 150px 20px;
+}
+.inputs_table {
+    display: flex;
+  gap: 40px; 
+  color: #707070;
+
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+input {
+    padding: 17px 10px;
+    width: 150px;
+    border-radius: 8px;
+    border: 1px solid #DCDCDC;
+    background: none;
+    font-weight: bolder;
+    font-size: 20px;
+   
+}
+
+.button_table {
+    display: flex;
+    align-items: center;
+}
+
+.button_table :nth-child(2){
+    border: none;
+    background: none;
+    cursor: pointer;
+    background-color: #854DFF;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.data_tables {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 85px;
+    letter-spacing: -2%;
+    font-style: oblique;
+  color: #854DFF;
+  font-weight: 800;
+}
+
+.data_table b{
+    display: flex;
+    gap: 20px;
+}
+.text {
+    color: #151515;
+}
+.error{
+    color: red;
+}
+/* for phone */
+@media screen and (max-width:768px) {
+    .main{
+        width: 340px;
+        height:490px;
+        padding: 0%;
+    }
+    .button_table{
+        padding-top: 20px;
+    }
+    .button_table :nth-child(1){
+    width: 290px;
+    margin-left: 10px;
+    }
+    .button_table :nth-child(2) img{
+        width: 20px;
+        margin: 0 auto;
+    }
+      .button_table :nth-child(2){
+        max-width: 30px; 
+        height: 20px;
+       align-items: center;
+       justify-content: center;
+       display: flex;
+       position: absolute;
+       left: 40%;
+       
+    }
+
+    .inputs_table{
+        width: 340px;
+        font-size: 12px;
+    }
+    input {
+        padding: 10px 14px;
+        width: 85px;
+        border-radius: 8px;
+        border: 1px solid #DCDCDC;
+        background: none;
+        font-weight: bolder;
+        font-size: 12px;
+       
+    }
+    
+    .button_table {
+        display: flex;
+        align-items: center;
+    }
+    
+    .button_table :nth-child(2){
+        border: none;
+        background: none;
+        cursor: pointer;
+        background-color: #854DFF;
+        padding: 20px;
+        border-radius: 50%;
+    }
+  
+      
+    .data_tables {
+     padding-top: 50px;
+        font-size: 55px;
+      
+    }
+    
+ 
+}
