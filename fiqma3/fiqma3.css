@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+.main{
+    width: 1003px;
+    height: 620px;
+box-shadow: 0px 10px 23px  #BFC8E6; 
+  border-radius: 10px;
+  margin: 0 auto;
+  font-family: "Poppins", serif;
+}
+.table_header{
+    width: 820px;
+    height: 100px;
+    margin: 10px auto;
+  color: #151B32;
+}
+.table_header_items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-top: 50px;
+}
+.table_header_title{
+    font-family: "Space Grotesk", serif;  
+}
+.table_header_info{
+    display: flex;
+    justify-content: space-between;
+    width: 810px;
+    align-items: center;
+  
+}
+.table_header_input input{
+    padding: 12px 24px;
+    border-radius:4px ;
+    border:1px solid #BFC8E6;
+}
+.table_header_menu{
+   display: flex;
+   justify-content: space-between;
+  width:404px ;
+  gap: 10px;
+  font-size: 15px;
+}
+.table_header_menu li{
+    transition: 0.4s;
+    font-size: 13px;
+    padding: 5px;
+    cursor: pointer;
+}
+.table_header_menu li:hover{
+    background-color: #516FD4;
+  border-radius: 5px;
+  color: white;
+
+}
+.users{
+    width: 820px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding-top: 70px;
+}
+.user_card{
+    width: 265px;
+    height: 175px;
+  
+    background-color: #FBFCFF;
+    border-radius:16px ;
+    color: #151B32;
+    transition: 1s;
+}
+.user_card_items{
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 15px;  
+}
+.user_card_img img{
+    width: 90px ;
+}
+.user_card_info{
+    display: flex;
+    flex-direction: column;
+    width: 130px;
+  gap: 3px;
+    height: 130px;
+    padding-top: 10px;
+}
+.user_card_hobbies{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding-top: 15px;
+    width: 150px;
+}
+.user_card_hobbies p{
+    border: 1px solid #BFC8E5;
+    border-radius: 10px;
+    padding: 3px 8px;
+    font-size: 10px;
+    color: #516FD4;
+    background-color: #FFFFFF;
+}
+.user_card_title{
+    font-size: 18px;
+    font-family: "Space Grotesk", serif;
+}
+.user_card_text{
+    font-size: 14px;
+}
+
+.user_card:hover{
+    width: 270px;
+    height: 180px;
+    box-shadow: 0px 8px 23px  #DAE0F9B2;
+    border: 1px solid #BFC8E5;
+}
+
+.user_card.hidden { display: none; }
