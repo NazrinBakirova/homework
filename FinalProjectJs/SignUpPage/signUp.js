@@ -56,6 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.Login').addEventListener('click', function () {
         window.location.href = '/homework/FinalProjectJs/LoginPage/login.html';
     });
+    document.querySelector('.btn').addEventListener('click', function () {
+        window.location.href = '/homework/FinalProjectJs/MainPage/main.html';
+    });
 });
 
 

@@ -5,8 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="main.js" async></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+
+
+<div class="main">
+    <div class="main_menu">
+        
+        <div class="main_menu_emblem"><img src="mainPNG/Movie.png"></div>
+        <ul class="main_menu_items">
+            <li class="main_menu_items_mainPage" data-filter="all"><img src="mainPNG/Shape (1).png"></li>
+            <li class="main_menu_items_movies" data-filter="Movie"><img src="mainPNG/Shape (2).png"></li>
+            <li class="main_menu_items_tvSeries" data-filter="TV Series"><img src="mainPNG/tv.png"></li>
+            <li class="main_menu_items_favorites" data-filter="favorites"><img src="mainPNG/Path (1).png"></li>
+            
+        </ul>
+    
+        <div class="main_menu_acc"><img src="mainPNG/account.png" width="40px" height="40px" style="border-radius: 50%; padding: 80vh 0;" ></div>
+    </div>
+    <div class="main_table">
+    <div class="main_table_search">
+        <div class="main_table_search_logo"><img src="mainPNG/search.png"></div>
+        <input type="text" id="search_input" placeholder="Search for movies or TV series">
+    </div>
+
+   
+    <div class="main_table_recomendation">
+        <div class="main_table_recomendation_title"><p>Recommended for you</p></div>
+          <div class="main_table_recomendation_items"></div>
+    </div>
+</div>
+
+</div>
+
+
+
 
 </body>
 </html>

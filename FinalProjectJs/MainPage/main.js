@@ -8,6 +8,7 @@ const movies = [
         id:1,
         year:2019,
         img:"https://s3-alpha-sig.figma.com/img/e083/61e7/d73d35e0d3e6d70c6140c7f29890d890?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=BJwfnG4x2KRH50ys1DIBUnK6wuYudv3CVToOF0Q2EsswXFlVpzUnFk7vMMIv-7nuUl2s8WM1q~iwce7xQHY4y7XcWlAtHK0NiRVeAvJ89ZywZ2iX2PyW2DXIdOogLrtlbWbFZcKiML3Z0PjOKAAdooUfJxxPFsg3KDoXcHMvm-AbQew1jVJXHzeqLIKIoeqHl4~1M~NX5C0e13PJErl54kmxmmYOBnzJwdn9dFDcs0Qd6l1vEGa00F3ntMe~g6hTjNQhtE9hlvpA813U8u5QwcWgKyRTs09mlWYtGN4QHz3s8jOi~~Y9pFQk3z-7eMk7IcOlUOOiRv9KJHeAeYtBUA__",
+       
         emblem:"mainPNG/Shape 2.png",
         type:"Movie",
         text:"PG",
@@ -222,4 +223,100 @@ const movies = [
     },
 
 ]
+document.addEventListener("DOMContentLoaded", () => {
+    const recommendationContainer = document.querySelector(".main_table_recomendation_items");
+    const searchInput = document.getElementById("search_input");
+    const menuItems = document.querySelectorAll(".main_menu_items li");
+    const favoritesMenuItem = document.querySelector(".main_menu_items_favorites");
 
+    let favoriteMovies = new Set();
+    let activeFilter = "all";
+
+    function createMovieCard(movie) {
+        const card = document.createElement("div");
+        card.classList.add("movie-card");
+        card.innerHTML = `
+            <img src="${movie.img}" alt="${movie.title}" class="movie-card-image" width="280px" height="226px">
+            <div class="favorite_icons">
+                <img src="mainPNG/Bookmark.png" alt="favorite" class="movie-card-favoriteEmpty" width="11.67px" height="14px" style="cursor: pointer; ${favoriteMovies.has(movie.title) ? 'display: none;' : 'display: block;'}">
+                <img src="mainPNG/Path (2).png" alt="favorite" class="movie-card-favoriteColored" width="11.67px" height="14px" style="cursor: pointer; ${favoriteMovies.has(movie.title) ? 'display: block;' : 'display: none;'}">
+            </div>
+            <div class="movie-card-info">
+                <div class="movie-card-info-main">
+                    <p class="movie-card-year">${movie.year}</p>
+                    <img src="${movie.emblem}" alt="${movie.type}" class="movie-card-emblem" width="12px" height="12px">
+                    <p class="movie-card-type">${movie.type}</p>
+                    <span class="movie-card-text">${movie.text}</span>
+                </div>
+                <h3 class="movie-card-title">${movie.title}</h3>
+            </div>
+        `;
+        
+        const favoriteEmpty = card.querySelector(".movie-card-favoriteEmpty");
+        const favoriteColored = card.querySelector(".movie-card-favoriteColored");
+        
+        favoriteEmpty.addEventListener("click", () => {
+            favoriteMovies.add(movie.title);
+            filterMovies();
+        });
+
+        favoriteColored.addEventListener("click", () => {
+            favoriteMovies.delete(movie.title);
+            filterMovies();
+        });
+        
+        return card;
+    }
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            menuItems.forEach(el => el.classList.remove("active"));
+            item.classList.add("active");
+    
+            activeFilter = item.dataset.filter;
+            filterMovies();
+        });
+    });
+
+    function displayMovies(moviesToShow) {
+        recommendationContainer.innerHTML = "";
+
+     
+
+        moviesToShow.forEach(movie => {
+            const movieCard = createMovieCard(movie);
+            recommendationContainer.appendChild(movieCard);
+        });
+    }
+
+    function filterMovies() {
+        const query = searchInput.value.toLowerCase();
+        let filteredMovies = movies.filter(movie => {
+            const matchesTitle = movie.title.toLowerCase().includes(query);
+            const matchesType = activeFilter === "all" || movie.type === activeFilter;
+            return matchesTitle && matchesType;
+        });
+
+        if (activeFilter === "favorites") {
+            filteredMovies = movies.filter(movie => favoriteMovies.has(movie.title));
+        }
+
+        displayMovies(filteredMovies);
+    }
+
+    searchInput.addEventListener("input", filterMovies);
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            activeFilter = item.dataset.filter;
+            filterMovies();
+        });
+    });
+
+    favoritesMenuItem.addEventListener("click", () => {
+        activeFilter = "favorites";
+        filterMovies();
+    });
+
+    displayMovies(movies);
+});

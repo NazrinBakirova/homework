@@ -28,3 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelector('.SignUp').addEventListener('click', function () {
     window.location.href = '/homework/FinalProjectJs/SignUpPage/signUp.html';
 });
+document.querySelector('.btn').addEventListener('click', function () {
+    window.location.href = '/homework/FinalProjectJs/MainPage/main.html';
+});

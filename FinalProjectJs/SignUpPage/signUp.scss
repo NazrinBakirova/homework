@@ -62,7 +62,8 @@ body {
                 border-bottom: 1px solid $blue;
                 background: none;
                 padding-left: 1rem;
-                
+                outline: none;
+                caret-color: $red;
                 font-size: 15px;
                 color: $white;
 
